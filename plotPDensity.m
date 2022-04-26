@@ -1,4 +1,4 @@
-function pfig = plotPDensity(wf, rf, phif, titleStr, suppressFig)
+function pfig = plotPDensity(rf, phif, wf, titleStr, suppressFig)
 
 if ~exist('suppressFig', 'var')
     suppressFig = 0;

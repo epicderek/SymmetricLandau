@@ -24,5 +24,5 @@ if isempty(Jcs)
 end
 
 for k = 1: length(Jcs)
-    cfigs{k} = plotCurrent(Jcs{k}, rf, phif, titleStrs{k+1}, suppressFig);
+    cfigs{k} = plotCurrent(rf, phif, Jcs{k}, titleStrs{k+1}, suppressFig);
 end

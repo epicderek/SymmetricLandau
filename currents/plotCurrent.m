@@ -1,4 +1,4 @@
-function cfig = plotCurrent(Jc, rf, phif, titleStr)
+function cfig = plotCurrent(rf, phif, Jc, titleStr)
 % Plot current given a symbolic function and the meshgrids.
 
 % Ensure proper dependences of symbolic function.
