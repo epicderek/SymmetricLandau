@@ -1,7 +1,7 @@
-function pfig = plotPDensity(wf, rf, phif, titleStr)
+function pfig = plotPDensity(wf, rf, phif, titleStr, suppressFig)
 
-if ~exist('titleStr', 'var')
-    titleStr = 'Probability Density';
+if ~exist('suppressFig', 'var')
+    suppressFig = 0;
 end
 
 % Ensure proper dependences of symbolic function.
@@ -19,7 +19,11 @@ wff = wf(rf, phif);
 pd = conj(wff).*wff;
 
 % Plot of probability.
-pfig = figure('visible', 'off');
+if suppressFig
+    pfig = figure('visible', 'off');
+else
+    pfig = figure;
+end
 pcolor(x, y, pd);
 colorbar
 xlabel('$x$')
