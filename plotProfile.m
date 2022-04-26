@@ -13,7 +13,7 @@ end
 [rf, phif] = meshgrid(rf, phif);
 
 % Plot probability density profile.
-pfig = plotPDensity(wf, rf, phif, titleStrs{1}, suppressFig);
+pfig = plotPDensity(rf, phif, wf, titleStrs{1}, suppressFig);
 
 % Plot currents.
 cfigs = cell(1, length(Jcs));
